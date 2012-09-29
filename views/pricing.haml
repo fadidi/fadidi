@@ -1,110 +1,155 @@
-:erb
-  <section id="content" class="container">
-
-
-  <div class="hero-unit">
-    <h1>Plans and pricing!</h1>
-    <p>
-      This is a template for a simple pricing table.
-      Take a look at our pricing options.
-    </p>
-  </div>
-
-
-  <!-- Pricing table -->
-  <div class="row pricing">
-
-    <!-- Plan -->
-    <div class="plan span4">
-      <h3 class="title">Basic</h3>
-      <h4 class="price gradient">$5.99 / month</h4>
-      <div class="well">
-        <ul>
-          <li><i class="icon-ok"></i> 5 users</li>
-          <li><i class="icon-ok"></i> 1TB of space</li>
-          <li><i class="icon-ok"></i> Limited access</li>
-          <li><i class="icon-ok"></i> No phone support</li>
-        </ul>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus.</p>
-        <hr />
-        <p class="ac">
-          <a class="button green" href="#">Select plan</a>
-        </p>
-      </div>
-    </div>
-    <!-- end Plan -->
-    
-    <!-- Most popular plan-->
-    <div class="plan span4 most-popular">
-      <h3 class="title">Silver</h3>
-      <h4 class="price gradient">$15.99 / month</h4>
-      <div class="well">
-        <p class="ribbon"><span>POPULAR</span></p>
-        <ul>
-          <li><i class="icon-ok"></i> 20 users</li>
-          <li><i class="icon-ok"></i> Unlimited access</li>
-          <li><i class="icon-ok"></i> 3TB of space</li>
-          <li><i class="icon-ok"></i> E-mail support</li>
-        </ul>          
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-        <hr />
-        <p class="ac">
-          <a class="button orange" href="#"><i class="icon-ok"></i> Select plan</a>
-        </p>
-      </div>
-    </div>
-    <!-- end Plan -->
-
-    <!-- Plan -->
-    <div class="plan span4">
-      <h3 class="title">Gold</h3>
-      <h4 class="price gradient">$25.99 / month</h4>
-      <div class="well">
-        <ul>
-          <li><i class="icon-ok"></i> Unlimited users</li>
-          <li><i class="icon-ok"></i> Unlimited access</li>
-          <li><i class="icon-ok"></i> 100TB of space</li>
-          <li><i class="icon-ok"></i> Phone and e-mail support</li>
-        </ul>          
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus.</p>
-        <hr />
-        <p class="ac">
-          <a class="button brown" href="#">Select plan</a>
-        </p>
-      </div>
-    </div>
-    <!-- end Plan -->
-
-  </div>
-  <!-- end Pricing table, end .row -->
-
-  <hr />
-
-  <p class="lead">
-    <b>All plans comes with 30-day</b> money-back guarantee.
-  </p>
-
-  <hr />
-
-  <!-- Extra words -->
-  <div class="row">
-    <div class="span4">
-      <h2><span class="grey">There's</span> Some</h2>
-       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="" href="#">Read more &raquo;</a></p>
-   </div>
-    <div class="span4">
-      <h2><span class="grey">There's</span> More</h2>
-       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="" href="#">Read more &raquo;</a></p>
-    </div>
-    <div class="span4">
-      <h2><span class="grey">There's</span> Text</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="" href="#">Read more &raquo;</a></p>
-    </div>
-  </div>
-  <!-- end Extra words -->
-
-  </section>
-
+%section#content.container
+  .hero-unit
+    %h1 Plans and pricing
+    %p 
+      We offer a range of plans aimed at accomodating the needs of any post, 
+      whether you're just entering online resource management, or migrating
+      to our platform.
+  .row.pricing
+    .plan.span4
+      %h3.title Humphrey
+      %h4.price.gradient $99.99 / month
+      .well
+        %ul
+          %li
+            %i.icon-ok
+            Domain name
+          %li
+            %i.icon-ok
+            Unlimited users
+          %li
+            %i.icon-ok
+            5GB file storage
+          %li
+            %i.icon-ok
+            CDN Enabled
+          %li
+            %i.icon-ok
+            Site-wide built-in search
+          %li
+            %i.icon-ok
+            Call-in phone support
+          %li
+            %i.icon-ok
+            Email support
+        %p Perfect for posts interested in getting their feet wet.
+        %hr
+        %p.ac
+          %a.button.green{:href => "#"} Select plan
+    .plan.span4.most-popular
+      %h3.title Kennedy
+      %h4.price.gradient $169.99 / month
+      .well
+        %ul
+          %li
+            %i.icon-ok
+            Domain name
+          %li
+            %i.icon-ok
+            Unlimited users
+          %li
+            %i.icon-ok
+            Unlimited file storage
+          %li
+            %i.icon-ok
+            CDN Enabled
+          %li
+            %i.icon-ok
+            Site-wide built-in search
+          %li
+            %i.icon-ok
+            10 Subdomains
+          %li
+            %i.icon-ok
+            10 Email addresses*
+          %li
+            %i.icon-ok
+            Call-in phone support
+          %li
+            %i.icon-ok
+            Email support
+          %li
+            %i.icon-ok
+            Customized theme
+          %li
+            %i.icon-ok
+            Themed 404 page
+        %p
+          The full spread for posts interested in distinctive branding and design.
+          %br
+          %br
+          *Additional email addresses $2.49/month
+        %hr
+        %p.ac
+          %a.button.orange{:href => "#"} Select plan
+    .plan.span4
+      %h3.title Shriver
+      %h4.price.gradient $129.99 / month
+      .well
+        -#%p.ribbon
+          %span popular
+        %ul
+          %li
+            %i.icon-ok
+            Domain name
+          %li
+            %i.icon-ok
+            Unlimited users
+          %li
+            %i.icon-ok
+            10GB file storage
+          %li
+            %i.icon-ok
+            CDN Enabled
+          %li
+            %i.icon-ok
+            Site-wide built-in search
+          %li
+            %i.icon-ok
+            5 Subdomains
+          %li
+            %i.icon-ok
+            3 Email addresses*
+          %li
+            %i.icon-ok
+            Call-in phone support
+          %li
+            %i.icon-ok
+            Email support
+          %li
+            %i.icon-ok
+            Customized color design
+        %p
+          A comfortable middle ground, with some personalized tweaking.
+          %br
+          %br
+          *Additional email addresses $4.49/month
+        %hr
+        %p.ac
+          %a.button.brown{:href => "#"} Select plan
+  %hr
+  %p.lead
+    All plans come with a
+    %b personal tour of the app
+    followed by a
+    %b 30-day free trial
+    before you commit.
+  %hr
+  .row
+    .span4
+      %h2
+        %span.grey Join the
+        Cloud
+      %p We host apps on Amazon EC2 cloud servers, ready and willing to tackle the toughest traffic.
+      %p Your data is stored in S3 cloud storage, with 99.999999999% data durability. Once it's there, you can sleep easily knowing you won't lose it.
+    .span4
+      %h2
+        %span.grey Feel the
+        Speed
+      %p By serving your static content (e.g., files & photos) over the CloudFront Content Delivery Network, your heavy data will be piped to PCVs in the field from the closest edge location. In West Africa? Grab it from Paris or Madrid! In Southeast Asia? Get it from Singapore or Tokyo!
+    .span4
+      %h2
+        %span.grey Enjoy
+        Human Support
+      %p We're not a big corporation, and we won't put you on hold. Deal with a real person, and deal with an RPCV.
+      %p Fadidi Media wrote the app, wrote the instruction manual, and we did both expressly to meet your needs.
