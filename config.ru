@@ -1,2 +1,2 @@
-require './test1'
+require './fadidi'
 run Sinatra::Application
