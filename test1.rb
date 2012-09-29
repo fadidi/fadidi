@@ -1,5 +1,15 @@
 require 'sinatra'
 
+set :layout => :layout
+
 get '/' do
-  'Hello World!'
+  haml :index
+end
+
+get '/portfolio' do
+  haml :portfolio
+end
+
+get '/pricing' do
+  haml :pricing
 end
