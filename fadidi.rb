@@ -13,3 +13,7 @@ end
 get '/pricing' do
   haml :pricing
 end
+
+get '/team' do
+  haml :team
+end
