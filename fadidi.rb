@@ -17,3 +17,7 @@ end
 get '/team' do
   haml :team
 end
+
+get '/products-services' do
+  haml :products_services
+end
