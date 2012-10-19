@@ -29,3 +29,7 @@ end
 get '/contact' do
   haml :contact
 end
+
+get '/ethos' do
+  haml :ethos
+end
