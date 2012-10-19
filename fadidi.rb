@@ -21,3 +21,11 @@ end
 get '/digitalpost' do
   haml :digitalpost
 end
+
+get '/cms-ecommerce' do
+  haml :cms_ecommerce
+end
+
+get '/contact' do
+  haml :contact
+end
