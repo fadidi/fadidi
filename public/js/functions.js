@@ -287,20 +287,22 @@ jQuery(document).ready(function($) {
    		$('#newsletter-form').submit(function(e){
 
 			var form = $('#newsletter-form').serialize();
+      var target = $('#newsletter-form').attr('action');
 
 			$('#newsletter-form').hide();
 			$('.newsletter .ajax-loader').show();
 
 			setTimeout(function(){
 			// post form data using ajax
-			$.post( 'php/newsletter-form.php', form, 
+			$.post( target, form, 
 
 				function(response) {
 
 					$('.newsletter .ajax-loader').hide();
 
 					// email was sent
-					if ( response.status == 1 ) {
+          alert(response.statusCode);
+					if ( response == 200 ) {
 						
 						$('#newsletter-form').html("&#10004; Thanks, you have been subscribed!");
 						$('#newsletter-form').show();

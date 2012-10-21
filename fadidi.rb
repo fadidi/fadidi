@@ -65,11 +65,12 @@ get '/ethos' do
   haml :ethos
 end
 
-get '/newsletter_subscribe' do
+post '/newsletter_subscribe' do
   Pony.mail(
     :to => params[:subscribe],
     :from => 'info@fadidi.com',
     :subject => 'Thanks for your interest!',
     :body => haml(:subscribe_confirmation, :layout => false)
   )
+  haml :newsletter_success
 end
