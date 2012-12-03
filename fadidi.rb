@@ -53,8 +53,20 @@ get '/digitalpost' do
   haml :digitalpost
 end
 
+get '/hostedpost' do
+  haml :hostedpost
+end
+
+get '/why_hostedpost' do
+  haml :why_hostedpost
+end
+
 get '/cms-ecommerce' do
   haml :cms_ecommerce
+end
+
+get '/bespoke' do
+  haml :bespoke
 end
 
 get '/contact' do
@@ -69,8 +81,20 @@ post '/newsletter_subscribe' do
   Pony.mail(
     :to => params[:subscribe],
     :from => 'info@fadidi.com',
+    :reply_to => 'info@fadidi.com',
     :subject => 'Thanks for your interest!',
     :body => haml(:subscribe_confirmation, :layout => false)
   )
   haml :newsletter_success
+end
+
+post '/send_contact_email' do
+  Pony.mail(
+    :to => 'support@fadidi.com',
+    :from => params[:email],
+    :reply_to => params[:email],
+    :subject => "Info request from: #{params[:name]} <#{params[:email]}>",
+    :body => params[:message]
+  )
+  haml :contact_email_success
 end
